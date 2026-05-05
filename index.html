@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scheduled maintenance | FinAid</title>
+  <style>
+    /* Hind Latin (400, 700) — matches fonts.googleapis.com/css?family=Hind on finaid.org */
+    @font-face {
+      font-family: 'Hind';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('assets/fonts/Hind-400.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Hind';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('assets/fonts/Hind-700.woff2') format('woff2');
+    }
+
+    :root {
+      --fa-navy: #00334c;
+      --fa-green: #52ac78;
+      --fa-green-hover: #469a6a;
+      --fa-body: #444444;
+      --fa-bg: #f4faf7;
+      --fa-white: #fefefe;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      font-family: Hind, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--fa-body);
+      background-color: var(--fa-bg);
+      -webkit-font-smoothing: antialiased;
+      padding: max(0.75rem, env(safe-area-inset-top, 0px))
+        max(0.75rem, env(safe-area-inset-right, 0px))
+        max(0.75rem, env(safe-area-inset-bottom, 0px))
+        max(0.75rem, env(safe-area-inset-left, 0px));
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 39rem;
+      margin: auto;
+      padding: 1.75rem 0.875rem 2.25rem;
+      text-align: center;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 1.35rem;
+      width: 100%;
+      max-width: 15rem;
+      height: auto;
+    }
+
+    h1 {
+      font-family: Hind, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      color: var(--fa-navy);
+      font-size: clamp(1.3rem, calc(5.5vw + 0.35rem), 1.75rem);
+      line-height: 1.22;
+      margin: 0 0 1.125rem;
+      letter-spacing: -0.02em;
+    }
+
+    .body-text {
+      margin: 0 0 1.75rem;
+      text-align: center;
+      font-size: clamp(0.9375rem, calc(2.8vw + 0.4rem), 1.125rem);
+    }
+
+    .body-text p {
+      margin: 0 0 1rem;
+    }
+
+    .body-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .body-text strong {
+      font-weight: 700;
+      color: var(--fa-navy);
+    }
+
+    .section-lead-hook {
+      margin: 0 0 0.25rem;
+      font-family: Hind, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.08rem, calc(3.8vw + 0.45rem), 1.35rem);
+      line-height: 1.28;
+      color: var(--fa-navy);
+    }
+
+    .section-lead {
+      margin: 0;
+      font-size: clamp(0.9375rem, calc(2.8vw + 0.4rem), 1.125rem);
+      line-height: 1.6;
+    }
+
+    .section-lead a {
+      font-weight: 700;
+    }
+
+    .section {
+      margin-top: 1.65rem;
+      text-align: center;
+    }
+
+    .section a {
+      color: var(--fa-green);
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+      transition: color 0.2s ease;
+    }
+
+    .section a:hover,
+    .section a:focus-visible {
+      color: var(--fa-green-hover);
+    }
+
+    @media (min-width: 40em) {
+      body {
+        font-size: 1.125rem;
+        line-height: 1.65;
+      }
+
+      .wrap {
+        padding: 2.5rem 1.5rem 3rem;
+        margin: auto;
+      }
+
+      .logo {
+        margin: 0 auto 2rem;
+        width: min(90vw, 20rem);
+        max-width: none;
+      }
+
+      h1 {
+        font-size: clamp(1.85rem, calc(2.2vw + 1.35rem), 2.65rem);
+        line-height: 1.2;
+        margin: 0 0 1.5rem;
+      }
+
+      .body-text,
+      .section-lead {
+        font-size: 1.125rem;
+      }
+
+      .section-lead-hook {
+        font-size: 1.35rem;
+        margin-bottom: 0.35rem;
+        line-height: 1.25;
+      }
+
+      .body-text {
+        margin: 0 0 2.5rem;
+      }
+
+      .section {
+        margin-top: 2.25rem;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <img
+      class="logo"
+      src="assets/images/finaid-logo.svg"
+      alt="FinAid"
+      width="606"
+      height="195"
+    />
+
+    <h1>FinAid is temporarily unavailable for scheduled maintenance.</h1>
+
+    <div class="body-text">
+      <p>
+        For over 30 years, FinAid has been a trusted source of financial aid information, advice and tools for students, parents and educators.
+      </p>
+      <p>
+        <strong>Check back soon</strong> for our comprehensive guides, calculators and resources to help you navigate the FAFSA, student loans, grants and more.
+      </p>
+    </div>
+
+    <section class="section" aria-label="Scholarships on Fastweb">
+      <p class="section-lead-hook" id="fastweb-callout">Looking for scholarships?</p>
+      <p class="section-lead">
+        Visit <a href="https://www.fastweb.com/" rel="noopener noreferrer" target="_blank">Fastweb.com</a>, the leading free scholarship platform, and get personalized scholarship matches!
+      </p>
+    </section>
+  </main>
+</body>
+</html>
